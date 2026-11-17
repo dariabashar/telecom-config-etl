@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventory>
+  <node name="akt-edge-01">
+    <vendor>Huawei</vendor>
+    <model>NetEngine 8000 M8</model>
+    <location>Aktau</location>
+    <address>10.40.0.1</address>
+    <function>edge</function>
+    <software>V800R023</software>
+  </node>
+  <node name="pvl-edge-01">
+    <vendor>Huawei</vendor>
+    <model>NetEngine 8000 M8</model>
+    <location>Pavlodar</location>
+    <address>10.50.0.1</address>
+    <function>edge</function>
+    <software>V800R023</software>
+  </node>
+  <node name="kar-edge-01">
+    <vendor>Nokia</vendor>
+    <model>7750 SR-1</model>
+    <location>Karaganda</location>
+    <address>10.60.0.1</address>
+    <function>edge</function>
+    <software>23.3.R1</software>
+  </node>
+</inventory>

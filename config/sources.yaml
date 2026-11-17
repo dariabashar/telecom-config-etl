@@ -1,0 +1,36 @@
+# Which files to ingest and how their columns map to the canonical model.
+# mapping: <canonical field>: <column / key / tag name in the source>
+# close_missing: if a key disappears from this source, close its current version (decommissioning).
+sources:
+  - path: devices.csv
+    format: csv
+    entity: device
+    close_missing: true
+    mapping: {hostname: hostname, vendor: vendor, model: model, site: site,
+              mgmt_ip: mgmt_ip, role: role, os_version: os_version}
+
+  - path: nodes.xml
+    format: xml
+    entity: device
+    record_xpath: ./node
+    close_missing: true
+    mapping: {hostname: name, vendor: vendor, model: model, site: location,
+              mgmt_ip: address, role: function, os_version: software}
+
+  - path: interfaces.xlsx
+    format: excel
+    sheet: Interfaces
+    entity: interface
+    close_missing: true
+    mapping: {hostname: Host, name: Interface, ip_address: IP, status: State,
+              speed_mbps: Speed, description: Description}
+
+  - path: edge_interfaces.json
+    format: json
+    entity: interface
+    root_key: devices
+    explode: interfaces
+    inherit: [hostname]
+    close_missing: true
+    mapping: {hostname: hostname, name: name, ip_address: ip, status: oper_status,
+              speed_mbps: speed, description: descr}

@@ -1,0 +1,10 @@
+hostname,vendor,model,site,mgmt_ip,role,os_version
+alm-core-01,Huawei,NE40E-X8A,Almaty,10.10.0.1,core,V800R022
+alm-core-02,Huawei,NE40E-X8A,Almaty,10.10.0.2,core,V800R021
+alm-agg-01,Cisco,ASR9006,Almaty,10.10.1.1,aggregation,7.5.2
+ast-core-01,Nokia,7750 SR-12,Astana,10.20.0.1,core,23.3.R1
+ast-agg-01,Nokia,7250 IXR-R6,Astana,10.20.1.1,aggregation,24.3.R1
+shy-acc-01,ZTE,ZXR10 5952E,Shymkent,10.30.2.1,access,V2.05
+shy-acc-02,ZTE,ZXR10 5952E,Shymkent,10.30.2.2,access,V2.05
+ast-fw-01,Juniper,SRX4600,Astana,10.20.9.1,firewall,22.4R2
+akt-agg-01,Cisco,ASR9006,Aktau,10.40.1.1,aggregation,7.5.2
